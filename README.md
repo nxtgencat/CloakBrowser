@@ -150,7 +150,7 @@ page.goto("https://example.com")
 
 ---
 
-## Latest: v0.4.5 — 59 source-level stealth patches, now on every platform (Chromium 148.0.7778.215.3)
+## Latest: v0.4.6 — 59 source-level stealth patches, now on every platform (Chromium 148.0.7778.215.3)
 
 - **CloakBrowser Pro** — the latest binary (Chromium 148.0.7778.215.3, 59 source-level patches) is available to Pro subscribers, now on **all platforms including macOS** (Apple Silicon + Intel); v146 stays free forever. Set a `license_key` (`licenseKey` in JS) or the `CLOAKBROWSER_LICENSE_KEY` env var and the wrapper fetches the latest build automatically. See [CloakBrowser Pro](#cloakbrowser-pro)
 - **.NET 8 / C# client** — CloakBrowser now ships as a NuGet package (`CloakBrowser`), mirroring the Python and JS wrappers.

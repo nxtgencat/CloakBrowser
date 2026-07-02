@@ -8,6 +8,11 @@ Changes are tagged: **[wrapper]** for Python/JS wrapper, **[binary]** for Chromi
 
 ## [Unreleased]
 
+## [0.4.6] — 2026-07-02
+
+- **[wrapper]** The resolved Pro license key is now passed to the browser process at launch (via `CLOAKBROWSER_LICENSE_KEY`) so the Pro binary can authenticate itself, including when you supply a custom `env`. Fixes launch failures on the newest Pro binaries. Python, JS, and .NET.
+- **[wrapper]** Headless launches on the newest Pro binaries now track the real screen surface instead of a fixed emulated viewport, keeping window geometry self-consistent (version-gated — older and free binaries keep the deterministic headless viewport). Passing an explicit `viewport=`/`no_viewport` (Python) or `viewport`/`defaultViewport` (JS) still overrides. Python, JS, and .NET.
+
 ## [0.4.5] — 2026-06-29
 
 - **[wrapper]** **`info` is now a full diagnostics command** — it reports the binary that will actually launch given your license, runs a launch test (`chrome --version`, plus a missing-shared-library probe on Linux), validates the license key to show the real tier (`free`/`solo`/`team`/`business`, or `invalid`), and checks Windows-font availability (Linux), the GeoIP database, and optional dependencies. `--quick` skips the launch test; `--json` emits machine-readable output. Python, JS, and .NET.
