@@ -150,7 +150,7 @@ page.goto("https://example.com")
 
 ---
 
-## Latest: v0.4.12 — 71 source-level stealth patches (Chromium 150.0.7871.114.3 — all platforms)
+## Latest: v0.4.13 — 71 source-level stealth patches (Chromium 150.0.7871.114.3 — all platforms)
 
 - **CloakBrowser Pro** — the latest binary (Chromium 150.0.7871.114.3, 71 source-level patches) is available to Pro subscribers on **Linux, Windows, and macOS**. Set a `license_key` (`licenseKey` in JS) or the `CLOAKBROWSER_LICENSE_KEY` env var and the wrapper fetches the latest build automatically. See [CloakBrowser Pro](#cloakbrowser-pro)
 - **.NET 8 / C# client** — CloakBrowser now ships as a NuGet package (`CloakBrowser`), mirroring the Python and JS wrappers.
@@ -196,8 +196,8 @@ Pro keeps you on the build that's actively maintained against it.
 Use Pro if CloakBrowser is part of production scraping, QA, monitoring, or
 automation where stale browser fingerprints cost you time or blocked runs.
 
-**New: try the latest Pro binary (Chromium 150) free for 7 days** — see how it
-performs against your targets. Cancel anytime.
+**Pro ships the latest binary (Chromium 150) with the newest anti-bot patches** — see how it
+performs against your targets.
 
 Activate with your license key (env var, `license_key=` param, or `~/.cloakbrowser/license.key`):
 
@@ -205,7 +205,7 @@ Activate with your license key (env var, `license_key=` param, or `~/.cloakbrows
 export CLOAKBROWSER_LICENSE_KEY=cb_xxxxxxxx
 ```
 
-Pro plans & free trial → **[cloakbrowser.dev](https://cloakbrowser.dev)**
+Pro plans → **[cloakbrowser.dev](https://cloakbrowser.dev)**
 
 ## Test Results
 

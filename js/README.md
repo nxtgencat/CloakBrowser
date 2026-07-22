@@ -252,8 +252,8 @@ free-release model:
 Anti-bot detection updates constantly — an older binary degrades within weeks.
 Pro keeps you on the build that's actively maintained against it.
 
-**New: try the latest Pro binary (Chromium 150) free for 7 days** — see how it
-performs against your targets. Cancel anytime.
+**Pro ships the latest binary (Chromium 150) with the newest anti-bot patches** — see how it
+performs against your targets.
 
 Activate with your license key (env var, `licenseKey` option, or `~/.cloakbrowser/license.key`):
 
@@ -261,7 +261,7 @@ Activate with your license key (env var, `licenseKey` option, or `~/.cloakbrowse
 export CLOAKBROWSER_LICENSE_KEY=cb_xxxxxxxx
 ```
 
-Pro plans & free trial → **[cloakbrowser.dev](https://cloakbrowser.dev)**
+Pro plans → **[cloakbrowser.dev](https://cloakbrowser.dev)**
 
 ## Requirements
 

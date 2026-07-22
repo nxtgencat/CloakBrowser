@@ -8,6 +8,11 @@ Changes are tagged: **[wrapper]** for Python/JS wrapper, **[binary]** for Chromi
 
 ## [Unreleased]
 
+## [0.4.13] — 2026-07-22
+
+- **[wrapper]** Fix the GeoIP database never refreshing and re-downloading on every launch (#458). The atomic replace used a rename that cannot overwrite an existing file on Windows, so a stale database was never updated and each launch re-fetched the ~70 MB database in a loop; with no lock, concurrent launches each started their own download. The refresh now replaces the file atomically and guards against duplicate concurrent downloads. Python, JavaScript, and .NET.
+- **[wrapper]** Quote `cloakbrowser[geoip]` in the install hints printed when the optional GeoIP dependency is missing (#459), so copy-pasting the hint into a shell that globs brackets (e.g. zsh) no longer errors.
+
 ## [0.4.12] — 2026-07-18
 
 - **[binary]** Chromium **150.0.7871.114.3** (Pro, all platforms) — 71 source-level patches. A full rebase onto the Chromium 150 line with the complete patch set ported forward, plus a round of coherence work. Pro license required; v146 stays free.
