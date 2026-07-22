@@ -6,8 +6,9 @@ Changes are tagged: **[wrapper]** for Python/JS wrapper, **[binary]** for Chromi
 
 ---
 
-## [Unreleased]
+## [0.5.0] — 2026-07-22
 
+- **[wrapper]** **Free tier via GitHub sign-in.** New `cloakbrowser login` command: sign in with GitHub to get a free license key (or save a paid key), `cloakbrowser logout` to revert. The launch banner and `cloakbrowser info` are now tier-aware (keyless / free / pro). Free keys always track the latest free build. Python, JavaScript, and .NET.
 - **[wrapper]** Fix `geoip=True` overriding a timezone or locale that was passed explicitly as a raw flag via `args=` (`--fingerprint-timezone`, `--lang`, `--fingerprint-locale`). A raw flag now counts as explicit and is preserved, matching the behavior of the `timezone=`/`locale=` parameters; GeoIP only fills the values you did not set. Python, JavaScript, and .NET.
 
 ## [0.4.13] — 2026-07-22

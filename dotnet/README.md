@@ -80,7 +80,7 @@ your code ──> HumanizedPage ──┬─ intercepted member ─> humanize en
 | **Persistent contexts** (profile reuse) | ✅ | `CloakLauncher.cs` |
 | **Humanize** - Bezier mouse, human typing, scrolling, actionability | ✅ | `Human/`, `Wrappers/` |
 | Transparent humanize via **source generator** | ✅ | `CloakBrowser.Generators/` |
-| **CLI** (`install` / `info` / `update` / `clear-cache`) | ✅ | `CloakBrowser.Cli/` |
+| **CLI** (`login` / `logout` / `install` / `info` / `update` / `clear-cache`) | ✅ | `CloakBrowser.Cli/` |
 
 ---
 
@@ -358,15 +358,15 @@ var page = await ctx.NewPageAsync();
 
 ### CloakBrowser Pro
 
-CloakBrowser ships in two tiers:
+The wrappers are MIT, free forever. The latest binary is **free to try**:
 
-- **Free (v146)** — free forever on [GitHub Releases](https://github.com/CloakHQ/cloakbrowser/releases). Unlimited sessions. Works today, goes stale as detection evolves.
-- **Pro (latest, v150)** — the newest patches and Chromium upgrades first, so detection stays green as anti-bot systems change. Linux, Windows, and macOS (Apple Silicon + Intel).
+- **Free, latest build (Chromium 150)** — the newest binary. Free with a GitHub sign-in, one concurrent session. Run `cloakbrowser login` or [grab your key](https://cloakbrowser.dev/free).
+- **Pro** — scale to **5, 20, 200, 2,000, or more concurrent sessions**, always first on the newest patches, with hands-on support. Linux, Windows, macOS. **[See plans and pricing →](https://cloakbrowser.dev)**
+- **v146** — the older build stays free on [GitHub Releases](https://github.com/CloakHQ/cloakbrowser/releases). A quick first look, but it ages fast as detection evolves.
 
-Pro plans → **[cloakbrowser.dev](https://cloakbrowser.dev)**
+Try the latest free → **[cloakbrowser.dev/free](https://cloakbrowser.dev/free)**  ·  Scale up on Pro → **[cloakbrowser.dev](https://cloakbrowser.dev)**
 
-Activate with a license key — the `LicenseKey` option, the `CLOAKBROWSER_LICENSE_KEY`
-env var, or `~/.cloakbrowser/license.key`:
+Get a key: run `cloakbrowser login` (GitHub sign-in for a free key, or paste a paid key), or set it directly via the `LicenseKey` option, the `CLOAKBROWSER_LICENSE_KEY` env var, or `~/.cloakbrowser/license.key`:
 
 ```csharp
 await using var browser = await CloakLauncher.LaunchAsync(new LaunchOptions

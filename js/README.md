@@ -157,11 +157,15 @@ const browser = await launch({ proxy: 'http://proxy:8080', geoip: true, timezone
 Pre-download the binary or check installation status from the command line:
 
 ```bash
+npx cloakbrowser login        # Get a free key via GitHub, or save a paid key
+npx cloakbrowser logout        # Remove the saved key (revert to the free binary)
 npx cloakbrowser install      # Download binary with progress output
 npx cloakbrowser info         # Show version, path, platform
 npx cloakbrowser update       # Check for and download newer binary
 npx cloakbrowser clear-cache  # Remove cached binaries
 ```
+
+`login` with no argument prompts you to paste a license key or press Enter to get a free key via a GitHub sign-in; `login <key>` saves a key directly. Both validate the key, then store it at `~/.cloakbrowser/license.key` so every launch picks it up.
 
 ### Utilities
 
@@ -243,25 +247,23 @@ const page = await browser.newPage();
 
 ## CloakBrowser Pro
 
-The wrapper (Python + JS) is MIT, free forever. The binary uses a delayed
-free-release model:
+The wrappers (Python, JS, .NET) are MIT, free forever. The latest binary is **free to try** — throw it at your hardest target today.
 
-- **Free (v146)** — free forever on [GitHub Releases](https://github.com/CloakHQ/cloakbrowser/releases). Unlimited sessions. Works today, goes stale as detection evolves.
-- **Pro (latest, v150)** — the newest patches and Chromium upgrades first, so the [test results](#test-results) stay green as anti-bot systems change. Linux, Windows, and macOS (Apple Silicon + Intel).
+Anti-bot systems change every week and an older binary quietly degrades. The latest build is the one that keeps passing. **Try it free, then upgrade when you're running for real.**
 
-Anti-bot detection updates constantly — an older binary degrades within weeks.
-Pro keeps you on the build that's actively maintained against it.
+- **Free, latest build (Chromium 150)** — the newest binary, the exact one that stays [green against live detection](#test-results). Free with a GitHub sign-in, one concurrent session. [Grab your key](https://cloakbrowser.dev/free) or run `cloakbrowser login`, then point it at the site that's been blocking you.
+- **Pro** — when it's part of production scraping, QA, monitoring, or automation: scale to **5, 20, 200, 2,000, or more concurrent sessions**, always first on the newest patches, with hands-on support. Linux, Windows, macOS. **[See plans and pricing →](https://cloakbrowser.dev)**
+- **v146** — the older build stays free on [GitHub Releases](https://github.com/CloakHQ/cloakbrowser/releases). A quick first look, but it ages fast as detection evolves.
 
-**Pro ships the latest binary (Chromium 150) with the newest anti-bot patches** — see how it
-performs against your targets.
-
-Activate with your license key (env var, `licenseKey` option, or `~/.cloakbrowser/license.key`):
+Get a key and activate it:
 
 ```bash
+cloakbrowser login          # GitHub sign-in for a free key, or paste a paid key
+# ...or set it directly (env var, licenseKey option, or ~/.cloakbrowser/license.key):
 export CLOAKBROWSER_LICENSE_KEY=cb_xxxxxxxx
 ```
 
-Pro plans → **[cloakbrowser.dev](https://cloakbrowser.dev)**
+Try the latest free → **[cloakbrowser.dev/free](https://cloakbrowser.dev/free)**  ·  Scale up on Pro → **[cloakbrowser.dev](https://cloakbrowser.dev)**
 
 ## Requirements
 
